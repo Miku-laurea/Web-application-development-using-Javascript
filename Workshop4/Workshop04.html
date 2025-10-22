@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Workshop 4: DOM Scripting</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body class="ws4">
+  <h1 id="mainHeading">Workshop 4: DOM Scripting</h1>
+  <hr/>
+
+  <!-- Exercise 1 -->
+  <h2>Exercise 1: Basic DOM Manipulation</h2>
+  <p>Click the buttons to manipulate the DOM.</p>
+
+  <button id="btn1">Button 1</button>
+  <button id="btn2">Button 2</button>
+  <button id="btn3">Button 3</button>
+
+  <p>This is paragraph 1.</p>
+  <p>This is paragraph 2.</p>
+  <p>This is paragraph 3.</p>
+  <p>This is paragraph 4.</p>
+  <p>This is paragraph 5.</p>
+
+  <hr/>
+
+  <!-- Exercise 2 -->
+  <h2 id="exercise2Heading">Exercise 2: DOM Traversing using IDs and Classes</h2>
+  <p id="me">I am the element with ID "me".</p>
+  <p class="surprise">I am the first surprise!</p>
+  <p class="surprise">I am the second surprise!</p>
+
+  <label><input type="checkbox" id="hideMe"> Hide me</label><br>
+  <label><input type="checkbox" id="showMe"> Show me</label><br>
+  <label><input type="checkbox" id="surprise"> Surprise</label>
+
+  <hr/>
+
+  <!-- Exercise 3 -->
+  <h2>Exercise 3: Images and pulldowns</h2>
+  <select id="carSelect">
+    <option value="">Select a car</option>
+    <option value="tesla">Tesla</option>
+    <option value="audi">Audi</option>
+    <option value="bmw">BMW</option>
+  </select>
+
+  <br><br>
+  <img id="carimage" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Tesla_Model_3_parked%2C_front_driver_side.jpg" width="300" alt="Car Image">
+
+  <hr/>
+
+  <!-- Exercise 4 -->
+  <h2>Exercise 4: Moving things around</h2>
+  <ul>
+    <li onclick="moveCar()">Move</li>
+    <li onclick="doMove()">Animate</li>
+    <li onclick="fadeOut()">Fade Out</li>
+    <li onclick="disappear()">Disappear</li>
+  </ul>
+
+  <hr/>
+
+  <!-- Exercise 5 -->
+  <h2>Exercise 5: Tables</h2>
+  <table id="myTable" class="display">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tiger Nixon</td>
+        <td>System Architect</td>
+        <td>$320,800</td>
+      </tr>
+      <tr>
+        <td>Garrett Winters</td>
+        <td>Accountant</td>
+        <td>$170,750</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <label>Name: <input type="text" id="name"></label><br>
+  <label>Position: <input type="text" id="position"></label><br>
+  <label>Salary: <input type="text" id="salary"></label><br>
+  <button id="addRowBtn">Add Row</button>
+
+
+</body>
+</html>
