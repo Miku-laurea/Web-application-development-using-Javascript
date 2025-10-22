@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workshop 5 - Exercise 1: Smart Forms</title>
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body>
+  <h1>Workshop 5: Smart Forms</h1>
+  <!-- Exercise 1 -->
+  <h2>Exercise 1: Contact Form</h2>
+  <p>Fill in your email address and a short comment (max 50 characters).</p>
+
+  <form id="contactForm" novalidate>
+    <label for="email">Email address:</label><br>
+    <input type="text" id="email" name="email" placeholder="Enter your email">
+    <span id="emailError" class="error-message" aria-live="polite"></span><br><br>
+
+    <label for="comment">Comment:</label><br>
+    <textarea id="comment" name="comment" placeholder="Enter your comment"></textarea>
+    <span id="commentError" class="error-message" aria-live="polite"></span><br><br>
+
+    <button type="submit">Send</button>
+  </form>
+  <hr>
+  <!-- Exercise 2 -->
+  <h2>Exercise 2: Membership Calculator</h2>
+  <form id="membershipForm">
+    <p>Create Your Membership – Complete this form to calculate your membership.</p>
+    <label>Type:</label>
+    <select id="type">
+      <option value="10">Basic – €10</option>
+      <option value="15">Premium – €15</option>
+      <option value="20">Gold – €20</option>
+      <option value="25">Platinum – €25</option>
+    </select><br><br>
+
+    <label>Years:</label>
+    <input type="number" id="years" min="1" value="1"><br><br>
+
+    <label>Cost (€):</label>
+    <input type="text" id="cost" readonly><br>
+    <span id="discountMessage" class="highlight"></span><br><br>
+
+    <button type="button" id="calcBtn">Calculate</button>
+  </form>
+
+  <hr>
+  <!-- Exercise 3 -->
+  <h2>Exercise 3: Book Order</h2>
+  <p>Calculate a bulk book order.</p>
+  <form id="bookForm">
+    <label>Quantity:</label>
+    <input type="number" id="quantity" min="0"><br><br>
+
+    <label>Price per Unit (€):</label>
+    <input type="number" id="price" step="0.01"><br><br>
+
+    <label>VAT (%):</label>
+    <input type="number" id="vat" value="24"><br><br>
+
+    <label>Discount (%):</label>
+    <input type="number" id="discount" value="5"><br><br>
+
+    <label>Shipping (€):</label>
+    <input type="number" id="shipping" value="0" step="0.01"><br><br>
+
+    <button type="button" id="bookCalc">Calculate Total</button>
+  </form>
+  <p><strong>Total (€):</strong> <span id="total"></span></p>
+
+  <hr>
+  <!-- Exercise 4 -->
+  <h2>Exercise 4: Hidden Extra Fields</h2>
+  <form id="contactPrefForm">
+    <p>Select your preferred contact method:</p>
+    <label><input type="radio" name="contact" value="email"> Email</label>
+    <label><input type="radio" name="contact" value="phone"> Phone</label>
+    <label><input type="radio" name="contact" value="sms"> SMS</label><br><br>
+
+    <div id="extraFields" class="hidden">
+      <label id="extraLabel"></label><br>
+      <input type="text" id="extraInput">
+    </div><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
